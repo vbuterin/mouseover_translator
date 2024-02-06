@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Word Translator",
+    "version": "1.0",
+    "description": "Translate words on mouseover.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "dicts/Chinese.json",
+        "dicts/Spanish.json",
+        "dicts/German.json",
+        "dicts/Italian.json",
+        "dicts/Portuguese.json",
+        "dicts/Russian.json",
+        "dicts/Ukrainian.json",
+        "dicts/Serbo-Croatian.json",
+        "dicts/Japanese.json"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Wrap Words"
+    }
+}
+
